@@ -1,0 +1,9 @@
+body {
+    background-color: #f0f0f0;
+    font-family: SF Pro, sans-serif;
+}
+
+#clock {
+    text-align: center;
+    margin-top: 50px;
+}
