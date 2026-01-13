@@ -4,13 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="Clock.css">
-  <title>clock</title>
+  <title>Clock</title>
 </head>
 <body>
-  <div id="clock">
-    <p id="time">00:00:00</p>
-    <p id="date">00/00/0000</p>
+  
+  <div class="clock-container">
+    <div id="time">00:00:00</div>
+    <div id="date">Loading...</div>
+
+    <button id="toggleBtn">Light Mode</button>
   </div>
-  <script src="Clock.js"></script>
+  
+  <script src="Clock.js" defer></script>
 </body>
 </html>
