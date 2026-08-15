@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #1d1e22;
+  color: #9598a7;
+  font-family: SF Pro;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 80px;
+  padding: 0 30px;
+}
+
+button {
+  width: 100px;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid #2a2d32;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  transition: all 0.2s ease-out;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  left: calc(var(--fontSize) * .7);
+  top: 0;
+  width: 1px;
+  background: #6a6d72;
+  transform: scaleY(0);
+  transition: transform 0.2s ease-in-out;
+}
+
+button:hover {
+  border: 1px solid #3a3d42;
+}
+
+button.active {
+  background: #555960;
+  border: 1px solid #6a6d72;
+}
+
+button.active + .button.active {
+  border-radius: 0 20px 20px 0;
+  margin-left: calc(var(--fontSize) * -2);
+  padding-left: 1.6em;
+  border-left: none;
+}
+
+button.active + .button.active:before {
+  transform: scaleY(1);
+}
+
+#content img {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  margin: 25px auto;
+}
+
+#content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+#content p {
+  font-size: 18px;
+}
+
+#content {
+  padding: 40px;
+}
+
+#content {
+  text-align: center;
+}
+
+.menuItems {
+  width: 600px;
+  max-width: 100%;
+  margin: 30px auto;
+}
+
+.foodItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  border: 1px solid #2a2d32;
+  border-radius: 10px;
+  background: #24262b;
+}
+
+.foodItem:hover {
+  border-color: #3a3d42;
+}
+
+.foodItem h3,
+.foodItem p {
+  margin: 0;
+}
+
+#content > h1 {
+  margin-bottom: 10px;
+}
+
+.mainSection {
+  margin-top: 20px;
+}
+
+.mainSection h2 {
+  font-size: 24px;
+  margin: 0 0 20px;
+  letter-spacing: 1px;
+}
+
+.foodItem h3 {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.foodItem p {
+  font-size: 16px;
+}
+
+button.active {
+  background: #555960;
+  border-color: #6a6d72;
+}
