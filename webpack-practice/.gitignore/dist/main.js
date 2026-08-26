@@ -1,1 +1,4 @@
-(()=>{"use strict";console.log("Hello, Kaiwo!")})();
+(() => {
+  "use strict";
+  console.log("Hello, Kaiwo!");
+})();

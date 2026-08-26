@@ -2,7 +2,7 @@ function createMenuItem(name, itemPrice) {
   const foodItem = document.createElement("div");
   foodItem.classList.add("foodItem");
 
-  const itemName = document.createElement("h3")
+  const itemName = document.createElement("h3");
   itemName.textContent = name;
   foodItem.appendChild(itemName);
 
@@ -18,7 +18,7 @@ function menu() {
 
   const mainSection = document.createElement("div");
   mainSection.classList.add("mainSection");
-  
+
   const menuItems = document.createElement("div");
   menuItems.classList.add("menuItems");
 

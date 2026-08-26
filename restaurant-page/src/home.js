@@ -7,7 +7,8 @@ function home() {
   content.appendChild(heading);
 
   const para = document.createElement("p");
-  para.textContent = "Welcome to Kaiwo Restaurant, where we serve delicious food";
+  para.textContent =
+    "Welcome to Kaiwo Restaurant, where we serve delicious food";
   content.appendChild(para);
 
   const image = document.createElement("img");

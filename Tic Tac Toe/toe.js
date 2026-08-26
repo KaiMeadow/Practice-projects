@@ -7,13 +7,13 @@ function Gameboard() {
     if (board[index] === "") {
       board[index] = mark;
     }
-  }
+  };
 
   const reset = () => {
-    for (let i=0; i < board.length; i++) {
+    for (let i = 0; i < board.length; i++) {
       board[i] = "";
     }
-  }
+  };
 
   return {
     getBoard,
@@ -23,20 +23,19 @@ function Gameboard() {
 }
 
 function Player(name, mark) {
-  let score = 0
+  let score = 0;
   const getName = () => name;
   const getMark = () => mark;
   const getScore = () => score;
 
   const increaseScore = () => score++;
-  
+
   return {
     getName,
     getMark,
     getScore,
     increaseScore,
   };
-
 }
 
 function Game(player1Name, player2Name) {
@@ -45,38 +44,47 @@ function Game(player1Name, player2Name) {
 
   const player1 = Player(player1Name, "X");
   const player2 = Player(player2Name, "O");
-  
+
   let currentPlayer = player1;
   const switchTurn = () => {
-  if(currentPlayer === player1) {
-    currentPlayer = player2;
-  } else {
-    currentPlayer = player1;
-  }
-}
+    if (currentPlayer === player1) {
+      currentPlayer = player2;
+    } else {
+      currentPlayer = player1;
+    }
+  };
 
   const gameboard = Gameboard();
   const winningConditions = [
-      [0, 1, 2], [3, 4, 5], [6, 7, 8],
-      [0, 3, 6], [1, 4, 7], [2, 5, 8], 
-      [0, 4, 8], [2, 4, 6] 
-  ]
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+  ];
 
   const checkWin = () => {
-      const currentBoard = gameboard.getBoard();
+    const currentBoard = gameboard.getBoard();
 
-      for (let i = 0; i < winningConditions.length; i++) {
-        const combo = winningConditions[i];
-        const a = combo[0];
-        const b = combo[1];
-        const c = combo[2];
+    for (let i = 0; i < winningConditions.length; i++) {
+      const combo = winningConditions[i];
+      const a = combo[0];
+      const b = combo[1];
+      const c = combo[2];
 
-        if (currentBoard[a] != "" && currentBoard[a] == currentBoard[b] && currentBoard[a] == currentBoard[c]) {
-          return true;
-        }
+      if (
+        currentBoard[a] != "" &&
+        currentBoard[a] == currentBoard[b] &&
+        currentBoard[a] == currentBoard[c]
+      ) {
+        return true;
       }
-      return false;
     }
+    return false;
+  };
 
   const playRound = (index) => {
     if (gameOver) {
@@ -84,7 +92,7 @@ function Game(player1Name, player2Name) {
     }
     const boardState = gameboard.getBoard();
 
-    if(boardState[index] !== "") {
+    if (boardState[index] !== "") {
       return;
     }
 
@@ -102,9 +110,8 @@ function Game(player1Name, player2Name) {
     }
 
     switchTurn();
-    
-  }
-  
+  };
+
   const getWinner = () => winner;
   const getGameOver = () => gameOver;
   const getCurrentPlayer = () => currentPlayer;
@@ -116,8 +123,7 @@ function Game(player1Name, player2Name) {
     getWinner,
     getGameOver,
     getCurrentPlayer,
-  }
-
+  };
 }
 
 function displayController() {
@@ -127,13 +133,11 @@ function displayController() {
 
   const render = () => {
     game.playRound(index);
-    
+
     for (let i = 0; i < board.length; i++) {
       cells[i].textContent = board[i];
     }
-  }
+  };
 
-  cells.addEventListener("click", (event) => {
-    
-  })
+  cells.addEventListener("click", (event) => {});
 }

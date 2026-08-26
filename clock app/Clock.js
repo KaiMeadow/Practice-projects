@@ -9,13 +9,13 @@ function updateClock() {
 
   if (hours >= 12) {
     period = "PM";
- }
+  }
 
- if (hours === 0) {
-  hours = 12;
- } else if (hours > 12) {
-  hours -= 12
- }
+  if (hours === 0) {
+    hours = 12;
+  } else if (hours > 12) {
+    hours -= 12;
+  }
 
   hours = String(hours).padStart(2, 0);
   minutes = String(minutes).padStart(2, 0);
@@ -31,17 +31,15 @@ function updateClock() {
   const body = document.body;
 
   document.addEventListener("DOMContentLoaded", () => {
+    const toggleBtn = document.getElementById("toggleBtn");
+    const body = document.body;
 
-  const toggleBtn = document.getElementById("toggleBtn");
-  const body = document.body;
-
-  toggleBtn.addEventListener("click", () => {
-    const theme = body.dataset.theme === "dark" ? "light" : "dark";
-    body.dataset.theme = theme;
-    toggleBtn.innerText = theme === "dark" ? "Light Mode" : "Dark Mode";
+    toggleBtn.addEventListener("click", () => {
+      const theme = body.dataset.theme === "dark" ? "light" : "dark";
+      body.dataset.theme = theme;
+      toggleBtn.innerText = theme === "dark" ? "Light Mode" : "Dark Mode";
+    });
   });
-
-});
 }
 
 setInterval(updateClock, 1000);

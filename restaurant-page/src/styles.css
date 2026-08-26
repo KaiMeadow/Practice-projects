@@ -34,7 +34,7 @@ button:before {
   content: "";
   position: absolute;
   height: 100%;
-  left: calc(var(--fontSize) * .7);
+  left: calc(var(--fontSize) * 0.7);
   top: 0;
   width: 1px;
   background: #6a6d72;

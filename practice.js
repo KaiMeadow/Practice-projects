@@ -86,7 +86,7 @@
 //   speak() {
 //     console.log(`${this.name} barks`);
 //   }
-  
+
 // }
 
 // const d = new Dog("Mitzie");

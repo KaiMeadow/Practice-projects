@@ -1,16 +1,22 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: SF Display, Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    SF Display,
+    Arial,
+    Helvetica,
+    sans-serif;
 }
 
 body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background 0.3s, color 0.3s;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    background 0.3s,
+    color 0.3s;
 }
 
 body[data-theme="dark"] {
@@ -24,33 +30,33 @@ body[data-theme="light"] {
 }
 
 .clock-container {
-    text-align: center;
+  text-align: center;
 }
 
 #time {
-    font-size: 60px;
-    margin-bottom: 10px;
+  font-size: 60px;
+  margin-bottom: 10px;
 }
 
 #date {
-    font-size: 30px;
-    opacity: 0.8;
+  font-size: 30px;
+  opacity: 0.8;
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #dadada;
+  background-color: #dadada;
 }
 
 button:active {
-    background-color: #c2c2c2;
+  background-color: #c2c2c2;
 }
