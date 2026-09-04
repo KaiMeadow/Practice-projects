@@ -1,0 +1,14 @@
+{
+  "name": "my-js-template",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "eslint": "...",
+    "globals": "...",
+    "jest": "..."
+  }
+}
